@@ -3,8 +3,13 @@
 (231123 ~ ing)
 
 --------------------
-## 스터디 그룹원
-[이유정](https://github.com/L-Y-Jeong) | [이지연](https://github.com/lee-jiyoen) | [이혜원](https://github.com/icegosimperson) | [최혜원](https://github.com/choihywon)
----|---|---|---|
-|   |  |[![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=icegosimperson)](https://solved.ac/icegosimperson)  |
+## 스터디 그룹원 소개
+
+| 프로필 | 이름 | 링크 |
+| ------ | ---- | ---- |
+| ![](https://github.com/L-Y-Jeong.png) | 이유정 🌟 | [프로필 보기]((https://github.com/L-Y-Jeong) |
+| ![user2](https://github.com/lee-jiyoen.png) | 이지연 🚀 | [프로필 보기]((https://github.com/lee-jiyoen) | 
+| ![user3](https://github.com/icegosimperson.png) | 이혜원 📚 | [프로필 보기](https://github.com/icegosimperson) | [![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=icegosimperson)](https://solved.ac/icegosimperson)
+| ![user4](https://github.com/choihyewon.png) | 최혜원 💻 | [프로필 보기](https://github.com/choihyewon) |
+
 
