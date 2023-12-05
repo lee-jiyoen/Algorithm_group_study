@@ -8,7 +8,7 @@
 | [이유정](https://github.com/L-Y-Jeong)  | [이지연](https://github.com/lee-jiyoen) | [이혜원](https://github.com/icegosimperson) | [최혜원](https://github.com/choihywon) |
 | --------- | --------- | --------- | --------- |
 | ![이유정](https://github.com/L-Y-Jeong.png) | ![이지연](https://github.com/lee-jiyoen.png) | ![이혜원](https://github.com/icegosimperson.png) | ![최혜원](https://github.com/choihywon.png) |
-|          |       | <p align="center">[![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=icegosimperson)](https://solved.ac/icegosimperson)</p> |     |
+|          |       | <p align="center">[![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=icegosimperson)](https://solved.ac/icegosimperson)</p> | <p align="center">[![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=dongsim00)](https://solved.ac/profile/dongsim00)  |
 
 
 -------------------
