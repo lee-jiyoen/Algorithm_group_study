@@ -8,7 +8,7 @@ public class Main {
 		
 		StringTokenizer st;	
 		String str;
-		String result = "";
+		String result = ""; // br
 
 		while((str = br.readLine()) != null) {
 		    st = new StringTokenizer(str, " ");
