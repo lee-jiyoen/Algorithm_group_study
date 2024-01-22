@@ -13,7 +13,8 @@ public class Main {
 		
 
 		dp[0] = 0;
-		
+
+		// 이 조건문을 추가하지 않으면 런타임에러 rayIndexOutOfBounds (배열의 크기를 초과하는 인덱스에 접근) 오류 발생
 		if(number>=1)
 			dp[1] = 1;
 		if(number>=2)
