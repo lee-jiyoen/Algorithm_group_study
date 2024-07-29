@@ -1,0 +1,26 @@
+import java.util.*;
+ 
+class Solution {
+    public int[] solution(String[] name, int[] yearning, String[][] photo) {
+        int[] answer = new int[photo.length];
+        
+        Map<String, Integer>map=new HashMap<>();//hashmap생성
+        
+        for(int i=0; i<name.length; i++){
+            map.put(name[i], yearning[i]);//이름,점수 
+        }
+        
+        int score=0;//각행들의 점수 임시로 담을 곳
+        for(int i=0; i<photo.length; i++){
+            for(int j=0; j<photo[i].length; j++){
+                if(map.containsKey(photo[i][j])){//해당하는 사람 있으면
+                    score+= map.get(photo[i][j]);//그 사람 점수를 더함
+                }
+            }
+            answer[i]= score;      
+            score=0;
+        }
+        
+        return answer;
+    }
+}
