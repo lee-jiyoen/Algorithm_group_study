@@ -1,0 +1,19 @@
+        int total = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        
+        for(int i=0; i<requests.length; i++){
+            if(map.get(requests[i])==null)){
+                map.put(requests[i],1);
+            }
+            else {
+                map.put(requests[i],map.get(requests[i])+1);
+            }
+        }
+        
+        for (int request : map.keySet()) {
+            total+=Math.min(map.get(request), k);
+        }
+        
+        
+        
+        return total;
