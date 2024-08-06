@@ -1,0 +1,75 @@
+import java.util.*;
+import java.io.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        int N=0;
+        String order;
+        int n=0;
+        int index=0;
+        int id=0;
+        
+        Scanner sc = new Scanner(System.in);
+        N=sc.nextInt();
+        int[] stack = new int[N];
+        int[] answer= new int[N];
+        
+        for(int i=0; i<N; i++){
+            order=sc.next();
+
+            switch(order){
+                case "push":
+                    n=sc.nextInt();
+                    stack[index]=n;
+                    index++;
+                    break;
+                case "top":
+                    if(index==0){
+                        answer[id]= -1;
+                        id++;
+                    }else{
+                        answer[id]=stack[index-1];
+                        id++;
+                    }
+                    break;
+                case "size":
+                    answer[id]=index;
+                    id++;
+                    break;
+                case "pop":
+                    if(index==0){
+                        answer[id]= -1;
+                        id++;
+                        break;
+                    } else{
+                        answer[id]=stack[index-1];
+                        id++;
+                        stack[index-1]=0;
+                        index--;
+                        break;
+                    }
+                case "empty":
+                    if(index==0){
+                        answer[id]=1;
+                        id++;
+                        break;
+                    } else{
+                        answer[id]=0;
+                        id++;
+                        break;
+                    }
+                    
+            }
+        }
+        
+        for (int i = 0; i < id; i++){
+            System.out.println(answer[i]); 
+
+        }
+            
+
+
+        sc.close();  
+    }
+}
