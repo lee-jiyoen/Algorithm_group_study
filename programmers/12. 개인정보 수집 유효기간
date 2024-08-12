@@ -1,0 +1,36 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(String today, String[] terms, String[] privacies) {
+        int todate=Getdate(today);//오늘날짜
+        Map<String, Integer> map = new HashMap<>();
+        
+        for(String s:terms){//map(약관종류,기간)
+            String[] term=s.split(" ");
+            map.put(term[0], Integer.parseInt(term[1]));
+        }
+        
+        List<Integer> answer=new ArrayList<>();
+        
+        for(int i=0; i<privacies.length; i++){
+            String[] privacy = privacies[i].split(" ");
+            
+            if(Getdate(privacy[0])+(map.get(privacy[1])*28)<=todate)//오늘날짜보다 같거나 적으면=날짜 지났다는 뜻
+                answer.add(i+1);
+        }
+        
+        //리스트->배열로
+        return answer.stream().mapToInt(Integer::intValue).toArray();
+
+    }
+    
+    public static int Getdate(String date){//날짜의 총 day수 구하는 함수
+        String[ ] arr = date.split("\\.");
+        
+        int year=Integer.parseInt(arr[0]);
+        int month=Integer.parseInt(arr[1]);
+        int day=Integer.parseInt(arr[2]);
+        
+        return (year*12*28)+(month*28)+day;
+    }
+}
