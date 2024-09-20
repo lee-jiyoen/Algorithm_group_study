@@ -1,0 +1,60 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+    public static void main(String[] args) throws Exception {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        
+        int n = Integer.parseInt(bf.readLine());
+        LinkedList<Integer> queue = new LinkedList<>();
+
+        for(int i=0; i<n; i++){
+            String[] of=bf.readLine().split(" ");
+            switch (of[0]) {
+                case "push":
+                    queue.add(Integer.parseInt(of[1]));
+                    break;
+                case "pop":
+                    if (queue.size() == 0) {
+                        sb.append(-1).append("\n");
+                    } 
+                    else {
+                        int it = queue.get(0);
+                        queue.remove(queue.get(0));
+                        sb.append(it).append("\n");
+                    }
+                    break;
+                case "size":
+                    sb.append(queue.size()).append("\n");
+                    break;
+                case "empty":
+                    if (queue.size() == 0) {
+                        sb.append(1).append("\n");
+                    } else {
+                        sb.append(0).append("\n");
+                    }
+                    break;
+                case "front":
+                    if (queue.size() == 0) {
+                        sb.append(-1).append("\n");
+                    } 
+                    else {
+                        sb.append(queue.get(0)).append("\n");
+                    }
+                    break;
+                case "back":
+                    if (queue.size() == 0) {
+                        sb.append(-1).append("\n");
+                    } 
+                    else {
+                        sb.append(queue.get(queue.size() - 1)).append("\n");
+                    }
+                    break;
+                    
+            }
+        }
+        System.out.println(sb);
+
+    }
+}
