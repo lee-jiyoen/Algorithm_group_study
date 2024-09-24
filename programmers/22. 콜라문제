@@ -1,0 +1,16 @@
+import java.util.*;
+class Solution {
+    public int solution(int a, int b, int n) {
+        int answer = 0;
+        int bt1, bt2=0;
+        while(n>=a){
+            bt1=(n/a)*b;
+            bt2=n%a;
+            
+            answer+=bt1;
+            n=bt1+bt2;
+            
+}
+        return answer;
+    }
+}
