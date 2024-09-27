@@ -1,0 +1,75 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main".
+class Main {
+    public static void main(String[] args) throws Exception {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        
+        int n = Integer.parseInt(bf.readLine());
+        Deque<Integer> deque = new LinkedList<>();
+
+        for(int i=0; i<n; i++){
+            String[] of=bf.readLine().split(" ");
+            switch (of[0]) {
+                case "push_front":
+                    deque.addFirst(Integer.parseInt(of[1]));
+                    break;
+                case "push_back":
+                    deque.add(Integer.parseInt(of[1]));
+                    break;
+                case "pop_front":
+                    if (deque.size() == 0) {
+                        sb.append(-1).append("\n");
+                    } 
+                    else {
+                        int it = deque.getFirst();
+                        deque.removeFirst();
+                        sb.append(it).append("\n");
+                    }
+                    break;
+                case "pop_back":
+                    if (deque.size() == 0) {
+                        sb.append(-1).append("\n");
+                    } 
+                    else {
+                        int it = deque.getLast();
+                        deque.removeLast();
+                        sb.append(it).append("\n");
+                    }
+                    break;
+                case "size":
+                    sb.append(deque.size()).append("\n");
+                    break;
+                case "empty":
+                    if (deque.size() == 0) {
+                        sb.append(1).append("\n");
+                    } else {
+                        sb.append(0).append("\n");
+                    }
+                    break;
+                case "front":
+                    if (deque.size() == 0) {
+                        sb.append(-1).append("\n");
+                    } 
+                    else {
+                        sb.append(deque.getFirst()).append("\n");
+                    }
+                    break;
+                case "back":
+                    if (deque.size() == 0) {
+                        sb.append(-1).append("\n");
+                    } 
+                    else {
+                        sb.append(deque.getLast()).append("\n");
+                    }
+                    break;
+                    
+            }
+        }
+        System.out.println(sb);
+
+    }
+}
