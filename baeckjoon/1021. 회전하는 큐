@@ -1,0 +1,52 @@
+import java.util.*;
+import java.io.*;
+
+class Main {
+    public static void main(String[] args) throws Exception {
+        
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		LinkedList<Integer> deque = new LinkedList<Integer>();
+		
+		int c = 0;
+		int N = Integer.parseInt(st.nextToken());	
+		int M = Integer.parseInt(st.nextToken());
+        int[] b_arry = new int[M];
+        
+        st = new StringTokenizer(br.readLine(), " ");
+        for(int i = 0; i < M; i++){
+            b_arry[i] = Integer.parseInt(st.nextToken());
+        }
+
+        for(int i = 1; i <= N; i++){
+            deque.offer(i);
+        }
+    
+        for(int i = 0; i < M; i++){
+            int b = deque.indexOf(b_arry[i]);
+            int half = 0;
+            
+            if(deque.size() % 2 == 0)
+                half = deque.size() / 2 - 1;
+            else
+                half = deque.size() / 2;
+
+            if(b <= half){
+                for(int j = 0; j < b; j++){
+                    int temp = deque.pollFirst();
+                    deque.offerLast(temp);
+                    c++;
+                }
+            }
+            else{
+                for(int j = 0; j < deque.size() - b; j++){
+                    int temp = deque.pollLast();
+                    deque.offerFirst(temp);
+                    c++;
+                }
+            }
+            deque.pollFirst(); 
+        }
+        System.out.println(c);
+    }
+}
