@@ -1,0 +1,40 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main".
+class Main {
+    static int N,K;
+    static int arr[];
+    static HashSet<String> set = new HashSet<>();
+    static boolean is[];
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        N=Integer.parseInt(br.readLine());
+        K=Integer.parseInt(br.readLine());
+        arr= new int[N];
+        is=new boolean[N];
+
+        for(int i=0; i<N; i++){
+            arr[i]=Integer.parseInt(br.readLine());
+        }
+
+        card(0, " ");
+        System.out.println(set.size());
+        
+    }
+    public static void card(int d, String s){
+        if(d==K){
+            set.add(s);
+            return;
+        }
+        for(int i=0; i<N; i++){
+            if(is[i]==false){
+                is[i]=true;
+                card(d+1,s+arr[i]);
+                is[i]=false;
+            }
+        }
+    }
+}
